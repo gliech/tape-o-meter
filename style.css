@@ -55,7 +55,7 @@ div.meterbar>progress::-webkit-progress-bar {
   border-radius: 5px;
 }
 
-// default color blue
+/* default color blue */
 
 div.meterbar>progress::-webkit-progress-value {
   border-radius: 5px;
@@ -67,7 +67,7 @@ div.meterbar>progress::-moz-progress-bar {
   background-color: rgb(0, 123, 255);
 }
 
-// 0% - 9% red
+/* 0% - 9% red */
 
 div.meterbar>progress[value*=".0"]::-webkit-progress-value {
   background-color: rgb(220, 53, 69);
@@ -77,7 +77,7 @@ div.meterbar>progress[value*=".0"]::-moz-progress-bar {
   background-color: rgb(220, 53, 69);
 }
 
-// 10% - 19% yellow
+/* 10% - 19% yellow */
 
 div.meterbar>progress[value*=".1"]::-webkit-progress-value {
   background-color: rgb(255, 193, 7);
@@ -87,7 +87,7 @@ div.meterbar>progress[value*=".1"]::-moz-progress-bar {
   background-color: rgb(255, 193, 7);
 }
 
-// 100% and above green
+/* 100% and above green */
 
 div.meterbar>progress[value^="1"]::-webkit-progress-value {
   background-color: rgb(40, 167, 69);
@@ -97,7 +97,7 @@ div.meterbar>progress[value^="1"]::-moz-progress-bar {
   background-color: rgb(40, 167, 69);
 }
 
-// make last meterbar big
+/* make last meterbar big */
 
 div.meterbar:last-of-type {
   grid-column: 1 / 3;
