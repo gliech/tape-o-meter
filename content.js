@@ -35,8 +35,8 @@ function createMeter(meterName, meterValue) {
   var progressBar = $('<div/>', { class: 'meterbar generated' } );
   progressBar.append( $('<progress/>', { value: meterValue } ) );
   progressBar.append( $('<div/>', { class: 'percentage', text: meterPercentage }) );
-  progressLabel.hide().appendTo('.grid').fadeIn(fadeTime);
-  progressBar.hide().appendTo('.grid').fadeIn(fadeTime);
+  progressLabel.hide().appendTo('body').fadeIn(fadeTime);
+  progressBar.hide().appendTo('body').fadeIn(fadeTime);
 }
 
 function populateGrid() {

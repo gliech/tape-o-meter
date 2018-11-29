@@ -1,14 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
 html, body {
-  height: 100%;
-  width: 100%;
   margin: 0;
   font-size: 25px;
   font-family: 'Lato', sans-serif;
 }
 
-.grid {
+body {
   display: grid;
   grid-template-columns: max-content 1fr;
   place-items: start;
@@ -16,7 +14,7 @@ html, body {
   grid-gap: 50px;
 }
 
-.grid>div.title {
+header {
   grid-column: 1 / 3;
   place-self: center;
   font-size: 50px;
@@ -62,18 +60,18 @@ div.meterbar>progress::-moz-progress-bar {
   background-color: rgb(23, 162, 184);
 }
 
-.grid>div.meterbar:last-of-type {
+div.meterbar:last-of-type {
   grid-column: 1 / 3;sh pass variables from subsh
 }
 
-.grid>div.meterbar:last-of-type>progress {
+div.meterbar:last-of-type>progress {
   height: 45px;
 }
 
-.grid>div.meterbar:last-of-type>progress::-webkit-progress-value {
+div.meterbar:last-of-type>progress::-webkit-progress-value {
   background-color: rgb(255, 193, 7);
 }
 
-.grid>div.meterbar:last-of-type>progress::-moz-progress-bar {
+div.meterbar:last-of-type>progress::-moz-progress-bar {
   background-color: rgb(255, 193, 7);
 }
