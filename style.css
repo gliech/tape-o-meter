@@ -17,9 +17,21 @@ header {
   padding: 0 0 10px;
 }
 
-header, footer.error {
+header {
   width: 100%;
   text-align: center;
+}
+
+div.error {
+  font-size: 22px;
+  color: #721c24;
+  background: #f8d7da;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #f5c6cb;
+  border-radius: 5px;
+  padding: 12px 20px;
+  margin: 25px 0 0;
 }
 
 label {
@@ -134,12 +146,12 @@ div.meterbar:last-of-type>progress {
   }
 
   /* The label margins can be reset because we have the grid gutter now */
-  label {
+  label, div.error {
     margin: 0;
   }
 
   /* All elements that should span the whole width of the grid */
-  header, footer, div.meterbar:last-of-type {
+  header, div.error, div.meterbar:last-of-type {
     grid-column: 1 / -1;
   }
 

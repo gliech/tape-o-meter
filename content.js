@@ -46,9 +46,9 @@ function createMeter(meterName, meterValue) {
 
 function createError() {
   var errorMessage = 'Error: could not load tapeout progress information';
-  var errorElement = $('<footer>', { class: 'error generated', text: errorMessage });
+  var errorElement = $('<div/>', { class: 'error generated', text: errorMessage });
   if ( $('.error').length == 0 ) {
-    errorElement.hide().appendTo('body').fadeIn(fadeTime);
+    errorElement.hide().insertAfter('header').fadeIn(fadeTime);
   }
 }
 
