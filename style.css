@@ -7,26 +7,29 @@ html, body {
 }
 
 body {
-  display: grid;
-  grid-template-columns: max-content 1fr;
-  place-items: start;
-  padding: 50px 50px 0;
-  grid-gap: 50px;
+  padding: 50px 50px 7px;
 }
 
 header {
-  grid-column: 1 / 3;
-  justify-self: center;
-  font-size: 50px;
+  /* see the grid section for details on 9.2vw */
+  font-size: 9.2vw;
   padding: 0 0 10px;
 }
 
-footer.error {
-  grid-column: 1 / 3;
-  place-self: center;
+header, footer.error {
+  text-align: center;
+  justify-self: center;
 }
 
-/* everything from here onward concerns the progress bars only */
+label {
+  display: block;
+  margin: 25px 0 5px;
+}
+
+
+/**********************/
+/* progress bar stuff */
+/**********************/
 
 div.meterbar {
   position: relative;
@@ -52,6 +55,7 @@ div.meterbar>progress {
   /* firefox background */
   background-color: rgb(233, 236, 239);
   border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
 div.meterbar>progress::-webkit-progress-bar {
@@ -104,10 +108,43 @@ div.meterbar>progress[value^="1"]::-moz-progress-bar {
 
 /* make last meterbar big */
 
-div.meterbar:last-of-type {
-  grid-column: 1 / 3;
+div.meterbar:last-of-type>progress {
+  height: 60px;
 }
 
-div.meterbar:last-of-type>progress {
-  height: 45px;
+
+/*******************************/
+/* CSS Grid for bigger screens */
+/*******************************/
+
+@media (min-width: 540px) {
+  body {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    place-items: start;
+    grid-gap: 50px;
+  }
+
+  /* The default header font size of 9.2 view width was chosen above to be as
+     close as possible to 50px at the breakpoint of 540px */
+  header {
+    font-size: 50px;
+  }
+
+  /* The label margins can be reset because we have the grid gutter now */
+  label {
+    margin: 0;
+  }
+
+  /* All elements that should span the whole width of the grid */
+  header, footer, div.meterbar:last-of-type {
+    grid-column: 1 / -1;
+  }
+
+  /* Make the thickness of the last meter bar less pronounced because 60px looks
+     ridiculous in the grid layout, where it is already highlighted by being
+     full-width anyways */
+  div.meterbar:last-of-type>progress {
+    height: 45px;
+  }
 }
