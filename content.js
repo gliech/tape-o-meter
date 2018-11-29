@@ -6,7 +6,6 @@ function loadContent() {
   $.ajax({
     url: csvUrl,
     dataType: 'text',
-    async: false,
     cache: false,
     ifModified: true,
     success: function(data, status) {
