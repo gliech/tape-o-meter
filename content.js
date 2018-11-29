@@ -9,16 +9,18 @@ function loadContent() {
     async: false,
     cache: false,
     ifModified: true,
-    success: function(data) {
-      if (data) {
-        $('.generated').fadeOut(fadeTime, function() { $(this).remove(); })
-        setTimeout( function() {
-          for ( let meter of processCSV(data) ) {
-            createMeter(meter[0], meter[1]);
-          }
-        }, fadeTime );
-      } else {
-        createError();
+    success: function(data, status) {
+      if (status == 'success') {
+        if (data) {
+          $('.generated').fadeOut(fadeTime, function() { $(this).remove(); })
+          setTimeout( function() {
+            for ( let meter of processCSV(data) ) {
+              createMeter(meter[0], meter[1]);
+            }
+          }, fadeTime );
+        } else {
+          createError();
+        }
       }
     },
     error: createError
