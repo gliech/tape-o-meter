@@ -26,6 +26,8 @@ footer.error {
   place-self: center;
 }
 
+/* everything from here onward concerns the progress bars only */
+
 div.meterbar {
   position: relative;
   width: 100%;
@@ -43,19 +45,22 @@ div.meterbar>progress {
   display: block;
   width: 100%;
   height: 40px;
+  /* reset stupid defaults */
   border: 0 none;
   -webkit-appearance: none;
   appearance: none;
+  /* firefox background */
   background-color: rgb(233, 236, 239);
   border-radius: 5px;
 }
 
 div.meterbar>progress::-webkit-progress-bar {
+  /* chrome etc. background */
   background-color: rgb(233, 236, 239);
   border-radius: 5px;
 }
 
-/* default color blue */
+/* bar default color blue */
 
 div.meterbar>progress::-webkit-progress-value {
   border-radius: 5px;
@@ -67,7 +72,7 @@ div.meterbar>progress::-moz-progress-bar {
   background-color: rgb(0, 123, 255);
 }
 
-/* 0% - 9% red */
+/* bar 0% - 9% red */
 
 div.meterbar>progress[value*=".0"]::-webkit-progress-value {
   background-color: rgb(220, 53, 69);
@@ -77,7 +82,7 @@ div.meterbar>progress[value*=".0"]::-moz-progress-bar {
   background-color: rgb(220, 53, 69);
 }
 
-/* 10% - 19% yellow */
+/* bar 10% - 19% yellow */
 
 div.meterbar>progress[value*=".1"]::-webkit-progress-value {
   background-color: rgb(255, 193, 7);
@@ -87,7 +92,7 @@ div.meterbar>progress[value*=".1"]::-moz-progress-bar {
   background-color: rgb(255, 193, 7);
 }
 
-/* 100% and above green */
+/* bar 100% and above green */
 
 div.meterbar>progress[value^="1"]::-webkit-progress-value {
   background-color: rgb(40, 167, 69);

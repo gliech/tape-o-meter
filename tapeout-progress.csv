@@ -1,8 +1,8 @@
 TX Frontend,0.35
 RX Frontend,0
 RX ADC,0.32
-Digital,8
+Digital,0.08
 Synthese,0.18
-Verification,0.3
+Verification,0.03
 Beer,1.1
 Total,0.16
