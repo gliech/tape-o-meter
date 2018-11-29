@@ -7,11 +7,12 @@ html, body {
 }
 
 body {
-  padding: 50px 50px 7px;
+  /* lower padding to account for drop shadow */
+  /* see the grid section for details on the 9.2vw */
+  padding: 50px 9.2vw 7px;
 }
 
 header {
-  /* see the grid section for details on 9.2vw */
   font-size: 9.2vw;
   padding: 0 0 10px;
 }
@@ -123,10 +124,12 @@ div.meterbar:last-of-type>progress {
     grid-template-columns: max-content 1fr;
     place-items: start;
     grid-gap: 50px;
+    /* The body left and right padding as well as the header font size of 9.2
+    view width was chosen above to be as close as possible to 50px at the
+    breakpoint of 540px */
+    padding: 50px 50px 7px;
   }
 
-  /* The default header font size of 9.2 view width was chosen above to be as
-     close as possible to 50px at the breakpoint of 540px */
   header {
     font-size: 50px;
   }
