@@ -8,8 +8,8 @@ html, body {
 
 body {
   /* lower padding to account for drop shadow */
-  /* see the grid section for details on the 9.2vw */
-  padding: 50px 9.2vw 7px;
+  /* see the grid section for details on the 9.2vw and 7vw*/
+  padding: 50px 9.2vw 7vw;
 }
 
 header {
@@ -18,8 +18,8 @@ header {
 }
 
 header, footer.error {
+  width: 100%;
   text-align: center;
-  justify-self: center;
 }
 
 label {
@@ -122,12 +122,11 @@ div.meterbar:last-of-type>progress {
   body {
     display: grid;
     grid-template-columns: max-content 1fr;
-    place-items: start;
     grid-gap: 50px;
-    /* The body left and right padding as well as the header font size of 9.2
-    view width was chosen above to be as close as possible to 50px at the
-    breakpoint of 540px */
-    padding: 50px 50px 7px;
+    /* The values of 9.2 and 7 view width for the body padding as well as the
+    header font size was chosen above to be as close as possible to the values
+    of 50px and 38px respectively at the breakpoint of 540px */
+    padding: 50px 50px 38px;
   }
 
   header {
