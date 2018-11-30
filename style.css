@@ -8,8 +8,8 @@ html, body {
 
 body {
   /* lower padding to account for drop shadow */
-  /* see the grid section for details on the 9.2vw and 7vw*/
-  padding: 50px 9.2vw 7vw;
+  /* see the grid section for details on the vw values */
+  padding: 38px 7vw 6vw;
 }
 
 header {
@@ -134,11 +134,11 @@ div.meterbar:last-of-type>progress {
   body {
     display: grid;
     grid-template-columns: max-content 1fr;
-    grid-gap: 50px;
-    /* The values of 9.2 and 7 view width for the body padding as well as the
+    grid-gap: 38px;
+    /* The values of 9.2, 7 and 6view width for the body padding as well as the
     header font size was chosen above to be as close as possible to the values
-    of 50px and 38px respectively at the breakpoint of 540px */
-    padding: 50px 50px 38px;
+    of 50, 38 an 33px respectively at the breakpoint of 540px */
+    padding: 38px 38px 33px;
   }
 
   header {
@@ -162,3 +162,5 @@ div.meterbar:last-of-type>progress {
     height: 45px;
   }
 }
+
+
