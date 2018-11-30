@@ -151,7 +151,7 @@ div.meterbar:last-of-type>progress {
   }
 
   /* All elements that should span the whole width of the grid */
-  header, div.error, div.meterbar:last-of-type {
+  header, div.error, div.meterbar:last-of-type, label:last-of-type {
     grid-column: 1 / -1;
   }
 
@@ -163,4 +163,35 @@ div.meterbar:last-of-type>progress {
   }
 }
 
+@media (min-width: 1930px) {
+  body {
+    grid-template-columns: repeat(2, max-content 1fr);
+  }
 
+  label:last-of-type {
+    grid-column: 1 / 2;
+  }
+
+  div.meterbar:last-of-type {
+    grid-column: 2 / -1;
+  }
+
+  div.meterbar:last-of-type>progress {
+    height: 40px;
+  }
+}
+
+/* No autofill columns because I have to add 2 at a time :( */
+/* ( 1930 - 5 * 38 ) / 2 * 3 + 7 * 38 */
+@media (min-width: 2876px) {
+  body {
+    grid-template-columns: repeat(3, max-content 1fr);
+  }
+}
+
+/* ( 1930 - 5 * 38 ) / 2 * 4 + 9 * 38 */
+@media (min-width: 3822px) {
+  body {
+    grid-template-columns: repeat(4, max-content 1fr);
+  }
+}
