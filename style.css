@@ -2,11 +2,11 @@
 
 html, body {
   margin: 0;
-  font-size: 25px;
-  font-family: 'Lato', sans-serif;
 }
 
 body {
+  font-size: 25px;
+  font-family: 'Lato', sans-serif;
   /* lower padding to account for drop shadow */
   /* see the grid section for details on the vw values */
   padding: 38px 7vw 6vw;
@@ -15,9 +15,6 @@ body {
 header {
   font-size: 9.2vw;
   padding: 0 0 10px;
-}
-
-header {
   width: 100%;
   text-align: center;
 }
@@ -135,7 +132,7 @@ div.meterbar:last-of-type>progress {
     display: grid;
     grid-template-columns: max-content 1fr;
     grid-gap: 38px;
-    /* The values of 9.2, 7 and 6view width for the body padding as well as the
+    /* The values of 9.2, 7 and 6 view width for the body padding as well as the
     header font size was chosen above to be as close as possible to the values
     of 50, 38 an 33px respectively at the breakpoint of 540px */
     padding: 38px 38px 33px;
